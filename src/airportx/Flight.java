@@ -9,7 +9,7 @@ package airportx;
 
 public class Flight{
 
-    String Flight;
+    Object Flight;
 
 	private String departure;
     private String arrival;
@@ -33,10 +33,6 @@ public class Flight{
     private String ProbW;
     private String ProbS;
     private String ProbG;
-
-    private Object flightListGH;
-    
-    
       
         public Flight() {
             this.departure = "departure";

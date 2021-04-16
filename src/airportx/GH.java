@@ -11,12 +11,27 @@ package airportx;
 public class GH {
 
 
+
+	//Databases for agents
+
+public Object GHdb() {
+    return GHdb;
+}
+
+public void GHdb (Object data) {
+    this.flightListGH = flightListGH;
+}
+
+@Override
+public Object toString() {
+    return "Flight Id : " + flightId + "\n\nPlane Id : " + planeId + "\n\nAirline : " + Airline + "\n\nGate : " + Gate + "\n\nSLDT : " + SLDT + "\n\nELDT : " + ELDT +
+    "\n\nEIBT : " + EIBT + "\n\nSOBT : " + SOBT + "\n\nEOBT : " + EOBT;
+}
+
+
 	        //______________________________________________________________________
 	        //input
 	        //______________________________________________________________________
-	        
-
-			flightListGH;
 			
 			Scanner sc = new Scanner(System.in);	
 	        System.out.println("Number of movements");

@@ -9,6 +9,7 @@ import java.util.List;
 
 import airportx.Flight;
 import airportx.Form;
+import airportx.Database;
 import java.io.IOException;
 
 public class Main {
@@ -18,23 +19,17 @@ public class Main {
      Form vp = new Form();
      vp.setVisible(true);
 
-      //Scanner scanner = new Scanner(new File("/Users/sashikoshirai/Downloads/SPL_FLIGHT_AR.csv"));
-      //scanner.useDelimiter(",");
-        //while(scanner.hasNext()){
-          //  System.out.print(scanner.next()+"|");
-        //}
-        //scanner.close();
-
-       
         Scanner scanner = new Scanner(new File("/Users/sashikoshirai/Downloads/SPL_FLIGHT_AR.csv"));
         Scanner dataScanner = null;
         int index = 0;
         List<Flight> flightList = new ArrayList<>();
+        List<Database> Database = new ArrayList<>();
   
         while (scanner.hasNextLine()) {
           dataScanner = new Scanner(scanner.nextLine());
           dataScanner.useDelimiter(",");
           Flight fl = new Flight();
+          Database fld = new Database();
     
           while (dataScanner.hasNext()) {
             String data = dataScanner.next();
@@ -88,10 +83,14 @@ public class Main {
           }
           index = 0;
           flightList.add(fl);
+          
         }
     
         scanner.close();
     
+        Database.add((airportx.Database) flightList);
+      
+        
         System.out.println(flightList);
     
     
