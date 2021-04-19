@@ -37,10 +37,13 @@ public Object toString() {
 	        System.out.println("Number of movements");
 	        int n = sc.nextInt();
 	        String flightId;
+			String planeId;
 			String Gate;
+			String SLDT[] = new String[n];
 	        String ELDT[] = new String[n];
 	        String RefTime[] = new String[n];
-	        String EOBT[] = new String[n];
+			String SOBT[] = new String[n]
+	        String EOBT[] = new String[n];;
 	        String EIBT[] = new String[n];
 			int WaitingTime[] = new int[n];
 	        int TurnAroundTime [] = new int[n];
@@ -60,10 +63,10 @@ public Object toString() {
 
 	        			    System.out.println("______________________________________");
 
-	        			    System.out.println("*ELDT for each movement*");
+	        			    System.out.println("*SLDT for each movement*");
 	        			    for (int i = 0; i < n; i++) {
-	        			        System.out.println("ELDT for each movement " + (i + 1));
-	        			        ELDT[i] = sc.nextInt();
+	        			        System.out.println("SLDT for each movement " + (i + 1));
+	        			        SLDT[i] = sc.nextInt();
 	        			    }
 
 	        			    System.out.println("_______________________________________");

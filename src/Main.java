@@ -9,7 +9,7 @@ import java.util.List;
 
 import airportx.Flight;
 import airportx.Form;
-import airportx.Database;
+import airportx.DatabaseFL;
 import java.io.IOException;
 
 public class Main {
@@ -23,13 +23,13 @@ public class Main {
         Scanner dataScanner = null;
         int index = 0;
         List<Flight> flightList = new ArrayList<>();
-        List<Database> Database = new ArrayList<>();
+        List<DatabaseFL> DatabaseFL = new ArrayList<>();
   
         while (scanner.hasNextLine()) {
           dataScanner = new Scanner(scanner.nextLine());
           dataScanner.useDelimiter(",");
           Flight fl = new Flight();
-          Database fld = new Database();
+          DatabaseFL fld = new DatabaseFL();
     
           while (dataScanner.hasNext()) {
             String data = dataScanner.next();
@@ -83,17 +83,33 @@ public class Main {
           }
           index = 0;
           flightList.add(fl);
-          
+          public static ArrayList<Flight> getAllFlights() {
+            return flightList;
+        }
+    
+        public static Flight findFlight(int id) {
+    
+            for (int i = 0; i < flightList.size(); i++) {
+                if (flightList.get(i).getFlightId() == id) {
+                    return flightList.get(i);
+                }
+            }
+    
+            return null;
+        }
+
+
         }
     
         scanner.close();
     
-        Database.add((airportx.Database) flightList);
+        Database.add((airportx.DatabaseFL) flightList);
       
         
         System.out.println(flightList);
     
-    
+        
+  
   
     //Simuation Clock
         for (int day = 1; day < 7; ++day) {
@@ -130,7 +146,18 @@ public class Main {
     
           }
         }
-      
+        String Schedule = randomTime();
+
+        public static String randomTime() {
+          //generate random time 00.00-23.59
+          int hour = r.nextInt(23);
+          int min = r.nextInt(59);
+          //if hour,minute is single digit, prepend 0
+          String h = (hour < 10) ? "0" + hour : String.valueOf(hour);
+          String m = (min < 10) ? "0" + min : String.valueOf(min);
+          return h + ":" + m;
+      }
+  
     
         //File myObj = new File("C:/Users/sashikoshirai/Downloads/filename.txt");
 

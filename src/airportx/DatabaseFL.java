@@ -10,7 +10,7 @@ import java.util.List;
 import java.io.IOException;
 import airportx.Flight;
 
-public class Database{
+public class DatabaseFL{
      Object GHdb; 
      Object ATCdb;
      Object ACOdb;
@@ -40,7 +40,7 @@ public class Database{
     private String ProbS;
     private String ProbG;
     
-    public Database() {
+    public DatabaseFL() {
         this.departure = "departure";
         this.arrival = "arrival";
         this.AicraftType = "AicraftType";
@@ -251,12 +251,12 @@ public String toString() {
     Scanner scanner = new Scanner(new File("/Users/sashikoshirai/Downloads/SPL_FLIGHT_AR.csv"));
     Scanner dataScanner = null;
     int index1 = 0;
-    List<Flight> flightList = new ArrayList<>();
+    List<DatabaseFL> DatabaseFL = new ArrayList<>();
   
     while (scanner.hasNextLine()) {
       dataScanner = new Scanner(scanner.nextLine());
       dataScanner.useDelimiter(",");
-      Flight fld = new Flight();
+      DatabaseFL fld = new DatabaseFL();
 
       while (dataScanner.hasNext()) {
         String data = dataScanner.next();
@@ -310,7 +310,7 @@ public String toString() {
       }
 
       index1 = 0;
-      flightList.add(fld);
+      DatabaseFL.add(fld);
     }
 
     scanner.close();
