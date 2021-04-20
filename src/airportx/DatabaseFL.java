@@ -11,241 +11,242 @@ import java.io.IOException;
 import airportx.Flight;
 
 public class DatabaseFL{
-     Object GHdb; 
-     Object ATCdb;
-     Object ACOdb;
-     Object APOdb;
-     Object ATCFMdb;
 
-    private String departure;
-    private String arrival;
-    private String AicraftType;
-    private String LocalStand;
-    private String Airline;
-    private String Gate;
-    private String planeId;
-	private String flightId;
-    private String SLDT;
-    private String ELDT;
-    private String ALDT;
-    private String RefTimestamp;
-    private String EIBT;
-    private String AIBT;
-    private String SOBT;
-    private String EOBT;
-    private String TOBT;
-    private String TSAT;
-    private String TTOT;
-    private String ProbW;
-    private String ProbS;
-    private String ProbG;
+    public Object GHdb; 
+    public Object ATCdb;
+    public Object ACOdb;
+    public Object APOdb;
+    public Object ATCFMdb;
+
+    private String departureFL;
+    private String arrivalFL;
+    private String AicraftTypeFL;
+    private String LocalStandFL;
+    private String AirlineFL;
+    private String GateFL;
+    private String planeIdFL;
+	private String flightIdFL;
+    private String SLDTFL;
+    private String ELDTFL;
+    private String ALDTFL;
+    private String RefTimestampFL;
+    private String EIBTFL;
+    private String AIBTFL;
+    private String SOBTFL;
+    private String EOBTFL;
+    private String TOBTFL;
+    private String TSATFL;
+    private String TTOTFL;
+    private String ProbWFL;
+    private String ProbSFL;
+    private String ProbGFL;
     
     public DatabaseFL() {
-        this.departure = "departure";
-        this.arrival = "arrival";
-        this.AicraftType = "AicraftType";
-        this.LocalStand = "LocalStand";
-        this.Airline = "Airline";
-        this.Gate = "Gate";
-        this.planeId = "planeId";
-        this.flightId = "flightId";
-        this.SLDT = "SLDT";
-        this.ELDT = "ELDT";
-        this.ALDT = "ALDT";
-        this.RefTimestamp = "RefTimestamp";
-        this.EIBT = "EIBT";
-        this.AIBT = "AIBT";
-        this.SOBT = "SOBT";
-        this.EOBT = "EOBT";
-        this.TOBT = "TOBT";
-        this.TSAT = "TSAT";
-        this.TTOT = "TTOT";
-        this.ProbW = "ProbW";
-        this.ProbS = "ProbS";
-        this.ProbG = "ProbG";
+        this.departureFL = "departure";
+        this.arrivalFL = "arrival";
+        this.AicraftTypeFL = "AicraftType";
+        this.LocalStandFL = "LocalStand";
+        this.AirlineFL = "Airline";
+        this.GateFL = "Gate";
+        this.planeIdFL = "planeId";
+        this.flightIdFL = "flightId";
+        this.SLDTFL = "SLDT";
+        this.ELDTFL = "ELDT";
+        this.ALDTFL = "ALDT";
+        this.RefTimestampFL = "RefTimestamp";
+        this.EIBTFL = "EIBT";
+        this.AIBTFL = "AIBT";
+        this.SOBTFL = "SOBT";
+        this.EOBTFL = "EOBT";
+        this.TOBTFL = "TOBT";
+        this.TSATFL = "TSAT";
+        this.TTOTFL = "TTOT";
+        this.ProbWFL = "ProbW";
+        this.ProbSFL = "ProbS";
+        this.ProbGFL = "ProbG";
     }
 
 public String getDeparture() {
-    return departure;
+    return departureFL;
 }
 
 public String getArrival() {
-    return arrival;
+    return arrivalFL;
 }
 
 public String getAicraftType() {
-    return AicraftType;
+    return AicraftTypeFL;
 }
 
 public String getLocalStand() {
-    return LocalStand;
+    return LocalStandFL;
 } 
 
 public String getAirline() {
-    return Airline;
+    return AirlineFL;
 }
 
 public String getGate() {
-    return Gate;
+    return GateFL;
 }
 
 public String getPlaneId() {
-    return planeId;
+    return planeIdFL;
 }
 
 public String getFlightId() {
-    return flightId;
+    return flightIdFL;
 }
 
 public String getSLDT() {
-    return SLDT;
+    return SLDTFL;
 }
 
 public String getELDT() {
-    return ELDT;
+    return ELDTFL;
 }
 
 public String getALDT() {
-    return ALDT;
+    return ALDTFL;
 }
 
 public String getRefTimestamp() {
-    return RefTimestamp;
+    return RefTimestampFL;
 }
 
 public String getEIBT() {
-    return EIBT;
+    return EIBTFL;
 }
 
 public String getAIBT() {
-    return AIBT;
+    return AIBTFL;
 }
 
 public String getSOBT() {
-    return SOBT;
+    return SOBTFL;
 }
 
 public String getEOBT() {
-    return EOBT;
+    return EOBTFL;
 }
 
 public String getTOBT() {
-    return TOBT;
+    return TOBTFL;
 }
 
 public String getTSAT() {
-    return TSAT;
+    return TSATFL;
 }
 
 public String getTTOT() {
-    return TTOT;
+    return TTOTFL;
 }
 
 public String getProbW() {
-    return ProbW;
+    return ProbWFL;
 }
 
 public String getProbS() {
-    return ProbS;
+    return ProbSFL;
 }
 
 public String getProbG() {
-    return ProbG;
+    return ProbGFL;
 }
 
 public void setDeparture(String newDeparture) {
-    this.departure = newDeparture;
+    this.departureFL = newDeparture;
 }
 
 public void setArrival(String newArrival) {
-    this.arrival = newArrival;
+    this.arrivalFL = newArrival;
 }
 
 public void setAircraftType(String newAircraftType) {
-    this.planeId = newAircraftType;
+    this.planeIdFL = newAircraftType;
 }
 
 public void setLocalStand (String newLocalStand) {
-    this.planeId = newLocalStand;
+    this.planeIdFL = newLocalStand;
 }
 
 public void setAirline(String newAirline) {
-    this.Airline = newAirline;
+    this.AirlineFL = newAirline;
 }
 
 public void setGate(String newGate) {
-    this.Gate = newGate;
+    this.GateFL = newGate;
 }
 
 public void setPlaneId(String newPlaneId) {
-    this.planeId = newPlaneId;
+    this.planeIdFL = newPlaneId;
 }
 
 public void setFlightId(String newFlightId) {
-    this.flightId = newFlightId;
+    this.flightIdFL = newFlightId;
 }
 
 public void setSLDT(String data) {
-    this.SLDT = data;
+    this.SLDTFL = data;
 }
 
 public void setELDT(String data) {
-    this.ELDT = data;
+    this.ELDTFL = data;
 }
 
 public void setALDT(String data) {
-    this.ALDT = data;
+    this.ALDTFL = data;
 }
 
 public void setRefTimestamp(String data) {
-    this.RefTimestamp = data;
+    this.RefTimestampFL = data;
 }
 
 public void setEIBT(String data) {
-    this.EIBT = data;
+    this.EIBTFL = data;
 }
 
 public void setAIBT(String data) {
-    this.AIBT = data;
+    this.AIBTFL = data;
 }
 
 public void setSOBT(String data) {
-    this.SOBT = data;
+    this.SOBTFL = data;
 }
 
 public void setEOBT(String data) {
-    this.EOBT = data;
+    this.EOBTFL = data;
 }
 
 public void setTOBT(String data) {
-    this.TOBT = data;
+    this.TOBTFL = data;
 }
     
 public void setTSAT(String data) {
-    this.TSAT = data;
+    this.TSATFL = data;
 }
 
 public void setTTOT(String data) {
-    this.TTOT = data;
+    this.TTOTFL = data;
 }
 
 public void setProbW(String data) {
-    this.ProbW = data;
+    this.ProbWFL = data;
 }
 
 public void setProbS(String newProbS) {
-    this.ProbS = newProbS;
+    this.ProbSFL = newProbS;
 }
 
 public void setProbG(String newProbG) {
-    this.ProbG = newProbG;
+    this.ProbGFL = newProbG;
 }
 
 @Override
 public String toString() {
-    return "Flight Id : " + flightId + "\n\nPlane Id : " + planeId + "\n\nAirline : " + Airline + "\n\nDeparture : " + departure + "\n\nArrival : " + arrival + "\n\nLocalStand : " + LocalStand + "\n\nGate : " + Gate + "\n\nSLDT : " + SLDT + 
-    "\n\nELDT : " + ELDT + "\n\nALDT : " + ALDT + "\n\nRefTimestamp : " + RefTimestamp + "\n\nEIBT : " + EIBT + "\n\nAIBT : " + AIBT + "\n\nSOBT : " + SOBT + "\n\nEOBT : " + EOBT + "\n\nTOBT : " + TOBT   
-    + "\n\nTSAT : " + TSAT + "\n\nTTOT : " + TTOT  + "\n\nProbW : " + ProbW + "\n\nProbS : " + ProbS + "\n\nProb : " + ProbG;
+    return "Flight Id : " + flightIdFL + "\n\nPlane Id : " + planeIdFL + "\n\nAirline : " + AirlineFL + "\n\nDeparture : " + departureFL + "\n\nArrival : " + arrivalFL + "\n\nLocalStand : " + LocalStandFL + "\n\nGate : " + GateFL + "\n\nSLDT : " + SLDTFL + 
+    "\n\nELDT : " + ELDTFL + "\n\nALDT : " + ALDTFL + "\n\nRefTimestamp : " + RefTimestampFL + "\n\nEIBT : " + EIBTFL + "\n\nAIBT : " + AIBTFL + "\n\nSOBT : " + SOBTFL + "\n\nEOBT : " + EOBTFL + "\n\nTOBT : " + TOBTFL +  
+    "\n\nTSAT : " + TSATFL + "\n\nTTOT : " + TTOTFL  + "\n\nProbW : " + ProbWFL + "\n\nProbS : " + ProbSFL + "\n\nProb : " + ProbGFL;
 }
     
     Scanner scanner = new Scanner(new File("/Users/sashikoshirai/Downloads/SPL_FLIGHT_AR.csv"));
@@ -314,8 +315,5 @@ public String toString() {
     }
 
     scanner.close();
-   
-   public Object toObject() {
-    return fld.ightId + fld.planeId +  fld.Gate + fld.SLDT + fld.ELDT + fld.EIBT + fld.SOBT + fld.EOBT + fld.TOBT;
     }
 }

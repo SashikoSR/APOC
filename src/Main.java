@@ -1,6 +1,5 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-//import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,7 +13,7 @@ import java.io.IOException;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException {
+    public static List<Flight> main(String[] args) throws IOException {
 
      Form vp = new Form();
      vp.setVisible(true);
@@ -83,11 +82,12 @@ public class Main {
           }
           index = 0;
           flightList.add(fl);
-          public static ArrayList<Flight> getAllFlights() {
+         
+          ArrayList<Flight> getAllFlights(); {
             return flightList;
         }
     
-        public static Flight findFlight(int id) {
+        Flight findFlight(int id); {
     
             for (int i = 0; i < flightList.size(); i++) {
                 if (flightList.get(i).getFlightId() == id) {
@@ -103,7 +103,7 @@ public class Main {
     
         scanner.close();
     
-        Database.add((airportx.DatabaseFL) flightList);
+        Database.add(airportx.DatabaseFL);
       
         
         System.out.println(flightList);
@@ -146,21 +146,20 @@ public class Main {
     
           }
         }
-        String Schedule = randomTime();
+        String Schedule = STime();
 
-        public static String randomTime() {
-          //generate random time 00.00-23.59
+        public static String STime() 
+        {
           int hour = r.nextInt(23);
           int min = r.nextInt(59);
-          //if hour,minute is single digit, prepend 0
           String h = (hour < 10) ? "0" + hour : String.valueOf(hour);
           String m = (min < 10) ? "0" + min : String.valueOf(min);
+        }
           return h + ":" + m;
-      }
+        }
   
     
         //File myObj = new File("C:/Users/sashikoshirai/Downloads/filename.txt");
 
 
     }
-}
