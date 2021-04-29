@@ -10,6 +10,36 @@ package airportx;
 
 public class GH {
 
+	 //______________________________________________________________________
+	 //input
+	 //______________________________________________________________________
+	        			  
+    private String AicraftType;
+    private String Airline;
+    private String Gate;
+    private String planeId;
+	private String flightId;
+    private String SLDT;
+    private String ELDT;
+    private String EIBT;
+    private String AIBT;
+    private String SOBT;
+    private String EOBT;
+    private String TOBT;
+	private int GHteam;
+    private int WaitingTime[] = new int[n];
+	private int TurnAroundTime [] = new int[n];
+	private int TotalWaitingTime = 0;
+	private int TotalTurnAroundTime = 0;
+	private double AVGWaitingTime;
+	private double AVGTurnAroundTime;
+
+	
+	
+	Scanner sc = new Scanner(System.in);	
+	int n = sc.nextInt();
+	
+	
 
 
 	//Databases for agents
@@ -19,44 +49,29 @@ public Object GHdb() {
 }
 
 public void GHdb (Object data) {
-    this.flightListGH = flightListGH;
+  
+	this.AicraftType = "AicraftType";
+	this.Airline = "Airline";
+	this.Gate = "Gate";
+	this.planeId = "planeId";
+	this.flightId = "flightId";
+	this.SLDT = "SLDT";
+	this.ELDT = "ELDT";
+	this.EIBT = "EIBT";
+	this.SOBT = "SOBT";
+	this.EOBT = "EOBT";
+	this.TOBT = "TOBT";
+	
+	
 }
 
 @Override
-public Object toString() {
-    return "Flight Id : " + flightId + "\n\nPlane Id : " + planeId + "\n\nAirline : " + Airline + "\n\nGate : " + Gate + "\n\nSLDT : " + SLDT + "\n\nELDT : " + ELDT +
-    "\n\nEIBT : " + EIBT + "\n\nSOBT : " + SOBT + "\n\nEOBT : " + EOBT;
+public String toString() {
+    return "Flight Id : " + flightId + "\n\nPlane Id : " + planeId + "\n\nAircraftType : " + AicraftType + "\n\nAirline : " + Airline + "\n\nGate : " + Gate + "\n\nSLDT : " + SLDT + "\n\nELDT : " + ELDT +
+    "\n\nEIBT : " + EIBT + "\n\nSOBT : " + SOBT + "\n\nEOBT : " + EOBT + "\n\nTOBT : " + TOBT;
 }
 
-
-	        //______________________________________________________________________
-	        //input
-	        //______________________________________________________________________
-			
-			Scanner sc = new Scanner(System.in);	
-	        System.out.println("Number of movements");
-	        int n = sc.nextInt();
-	        String flightId;
-			String planeId;
-			String Gate;
-			String SLDT[] = new String[n];
-	        String ELDT[] = new String[n];
-	        String RefTime[] = new String[n];
-			String SOBT[] = new String[n]
-	        String EOBT[] = new String[n];;
-	        String EIBT[] = new String[n];
-			int WaitingTime[] = new int[n];
-	        int TurnAroundTime [] = new int[n];
-	        int TotalWaitingTime = 0;
-	        int TotalTurnAroundTime = 0;
-	        double AVGWaitingTime;
-	        double AVGTurnAroundTime;
-
-			
-
-	        			    System.out.println("");
-
-	        			    for (int i = 0; i < n; i++) {
+	       		    for (int i = 0; i < n; i++) {
 	        			        System.out.println("Flight id of movement " + (i + 1));
 	        			        flightId= sc.nextInt();
 	        			    }

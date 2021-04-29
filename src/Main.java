@@ -8,7 +8,7 @@ import java.util.List;
 
 import airportx.Flight;
 import airportx.Form;
-import airportx.DatabaseFL;
+//import airportx.DatabaseFL;
 import java.io.IOException;
 
 public class Main {
@@ -22,13 +22,13 @@ public class Main {
         Scanner dataScanner = null;
         int index = 0;
         List<Flight> flightList = new ArrayList<>();
-        List<DatabaseFL> DatabaseFL = new ArrayList<>();
+       // List<DatabaseFL> DatabaseFL = new ArrayList<>();
   
         while (scanner.hasNextLine()) {
           dataScanner = new Scanner(scanner.nextLine());
           dataScanner.useDelimiter(",");
           Flight fl = new Flight();
-          DatabaseFL fld = new DatabaseFL();
+          //DatabaseFL fld = new DatabaseFL();
     
           while (dataScanner.hasNext()) {
             String data = dataScanner.next();
@@ -82,84 +82,19 @@ public class Main {
           }
           index = 0;
           flightList.add(fl);
-         
-          ArrayList<Flight> getAllFlights(); {
-            return flightList;
-        }
-    
-        Flight findFlight(int id); {
-    
-            for (int i = 0; i < flightList.size(); i++) {
-                if (flightList.get(i).getFlightId() == id) {
-                    return flightList.get(i);
-                }
-            }
-    
-            return null;
-        }
-
 
         }
     
         scanner.close();
     
-        Database.add(airportx.DatabaseFL);
+        //Database.add(airportx.DatabaseFL);
       
         
         System.out.println(flightList);
-    
-        
-  
-  
-    //Simuation Clock
-        for (int day = 1; day < 7; ++day) {
-          switch (day) {
-            
-            case 1:
-              System.out.println("\tD-6");
-              break;
-    
-            case 2:
-              System.out.println("\tD-5");
-              break;
-    
-            case 3:
-              System.out.println("\tD-4");
-              break;
-    
-            case 4:
-              System.out.println("\tD-3");
-              break;
-    
-            case 5:
-              System.out.println("\tD-2");
-              break;
-    
-            case 6:
-              System.out.println("\tD-1");
-              break;
-          }
-    
-          for (int minute = 0; minute < 1440; ++minute) {
-        
-            //System.out.println(minute / 60 + " : " + minute % 60 + " hours");
-    
-          }
-        }
-        String Schedule = STime();
 
-        public static String STime() 
-        {
-          int hour = r.nextInt(23);
-          int min = r.nextInt(59);
-          String h = (hour < 10) ? "0" + hour : String.valueOf(hour);
-          String m = (min < 10) ? "0" + min : String.valueOf(min);
-        }
-          return h + ":" + m;
-        }
-  
-    
-        //File myObj = new File("C:/Users/sashikoshirai/Downloads/filename.txt");
+      return flightList;
+      
+      }
 
-
-    }
+      
+      }

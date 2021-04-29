@@ -9,8 +9,6 @@ package airportx;
 
 public class Flight{
 
-    Object Flight;
-
 	private String departure;
     private String arrival;
     private String AicraftType;

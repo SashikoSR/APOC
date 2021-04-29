@@ -312,8 +312,31 @@ public String toString() {
 
       index1 = 0;
       DatabaseFL.add(fld);
-    }
+    
 
     scanner.close();
     }
+}
+
+public void GHdb(String arrivalFL, String AircraftTypeFL, String GateFL, String planeIdFL, String flightIdFL, String SLDTFL, String ELDTFL, String RefTimestampFL, String EIBTFL, String SOBTFL, String EOBTFL, String TOBTFL ) {
+    
+    this.arrivalFL = "arrival";
+    this.AicraftTypeFL = "AicraftType";
+    this.GateFL = "Gate";
+    this.planeIdFL = "planeId";
+    this.flightIdFL = "flightId";
+    this.SLDTFL = "SLDT";
+    this.ELDTFL = "ELDT";
+    this.RefTimestampFL = "RefTimestamp";
+    this.EIBTFL = "EIBT";
+    this.SOBTFL = "SOBT";
+    this.EOBTFL = "EOBT";
+    this.TOBTFL = "TOBT";
+}   
+    public void GHdb(){
+	    System.out.println("Flight Id : " + flightIdFL + "\n\nPlane Id : " + planeIdFL "\n\nArrival : " + arrivalFL + "\n\nGate : " + GateFL + "\n\nSLDT : " + SLDTFL + 
+        "\n\nELDT : " + ELDTFL + "\n\nRefTimestamp : " + RefTimestampFL + "\n\nEIBT : " + EIBTFL +  "\n\nSOBT : " + SOBTFL + "\n\nEOBT : " + EOBTFL + "\n\nTOBT : " + TOBTFL +  
+        "\n\nTOBT : " + TOBTFL);
+    }
+
 }
